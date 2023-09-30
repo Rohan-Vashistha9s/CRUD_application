@@ -7,7 +7,7 @@ import AddUser from './components/AddUser';
 import AllUser from './components/AllUser';
 import Navbar from './components/Navbar';
 import CodeForInterview from './components/CodeForInterview';
-
+import EditUser from './components/EditUser'
 
 function App() {
   return (
@@ -17,6 +17,7 @@ function App() {
      <Route path='/'  element={<CodeForInterview/>} />
     <Route path='/add' element={ <AddUser/>} />
     <Route path='all' element={<AllUser/>} />
+    <Route path='/edit/:id' element={<EditUser/>}/>
      </Routes>
      </BrowserRouter>
   );

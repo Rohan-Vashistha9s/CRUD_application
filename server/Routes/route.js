@@ -1,20 +1,12 @@
-import express,{Router} from 'express';
-import User from '../schema/userSchema.js';   
- 
- const Routes = express.Router();
+import express from 'express';
+import { addUser ,getUsers,getUser,editUser} from '../controller/userController.js';
+ const router = express.Router();
 
- Routes.post('/add', async (request,response) => {
-    const user = request.body;
-    
-    const newUser = new User(user);
-    try{
-      await  newUser.save();
-        response.status(201).json(newUser);
-    } 
-    catch(error){
-        response.status(409).json({message: error.message})
-    }
-})
+ router.post('/add',addUser);
+ router.get('/all', getUsers);
+ router.get('/:id',getUser);
+ router.put('/:id:',editUser);
+  
 
-export default Routes;
+export default router;
 

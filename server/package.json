@@ -18,6 +18,7 @@
     "mongodb": "4.1",
     "mongoose": "^6.2.11",
     "mongoose-auto-increment": "^5.0.1",
-    "nodemon": "^3.0.1"
+    "nodemon": "^3.0.1",
+    "routes": "^2.1.0"
   }
 }
